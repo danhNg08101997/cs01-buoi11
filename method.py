@@ -19,4 +19,13 @@ def find_min_num(arr_num):
     #     index -= 1
     
     # Duyệt 2 chiều
+    index_left = 0
+    index_right = len(arr_num) - 1
+    while index_left <= index_right:
+        if arr_num[index_left] < min_num:
+            min_num = arr_num[index_left]
+        if arr_num[index_right] < min_num:
+            min_num = arr_num[index_right]
+        index_left += 1
+        index_right -= 1
     return min_num

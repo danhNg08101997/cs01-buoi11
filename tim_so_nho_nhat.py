@@ -1,4 +1,4 @@
-# Yêu cầu: tìm số lẻ nhỏ nhất trong list
+# Yêu cầu: tìm số nhỏ nhất trong list
 
 # Process
 import method

@@ -57,3 +57,41 @@ def tim_tan_suat_hon_2_dict(lst_num):
         if dict_num[key] >= 2:
             output.append(key)
     return output
+# --------------------------------------------------------------------------
+# Tìm vị trí phần tử có trong mảng
+def find_index(num,lst_number):
+    index_output = []
+    for index, value in enumerate(lst_number):
+        if value == num:
+            index_output.append(index)
+    if index_output:
+        return f'index của {num} là {index_output}'
+    else:
+        return f'Không tìm thấy {num} trong list'
+# ------------------------------------------------------------------------
+# Xóa các phần tử trong mảng (mảng sẽ thay đổi thứ tự index => ta sẽ xóa ngược thay vì xóa xuôi)
+def delete_item_in_list(num_del, lst_number):
+    index = len(lst_number) - 1
+    if num_del in lst_number:
+        while index >= 0:
+            if num_del == lst_number[index]:
+                lst_number.pop(index)
+            index -= 1
+        return lst_number
+    else:
+        return f'Không có giá trị {num_del} trong {lst_number}' 
+# -----------------------------------------------------------------------------
+# Kiểm tra số nguyên tố
+import math
+def kiem_tra_so_nt(num):
+    output = True
+    if num < 2:
+        output = False
+        return output
+    uoc = 2
+    while uoc <= math.sqrt(num):
+        if num % uoc == 0:
+            output = False
+            break
+        uoc += 1
+    return output

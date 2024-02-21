@@ -1,4 +1,5 @@
 # Tìm số có số lần lặp 2 lần trở lên trong list
+
 # Process
 import method
 # Input
